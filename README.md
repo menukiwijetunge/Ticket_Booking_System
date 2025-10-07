@@ -29,6 +29,7 @@ Open a new **terminal** or **command prompt** and verify both Java and Maven are
 ```bash
 java -version
 mvn -version
+```
 ---
 
 ## 🚀 Run the Project
