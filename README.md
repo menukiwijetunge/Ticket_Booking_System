@@ -36,3 +36,9 @@ mvn -version
 
 In your VS Code terminal, execute:
 ``` mvn clean javafx:run ```
+
+👤 Default Users
+| Role  | Username | Password |
+| ----- | -------- | -------- |
+| User  | user1    | password |
+| Admin | admin    | admin123 |
