@@ -1,0 +1,29 @@
+# =========================
+# Build Artifacts Only
+# =========================
+
+# Maven target directories
+target/
+
+# Gradle build directory (if ever used)
+build/
+
+# Java compiled class files
+*.class
+
+# Log files
+*.log
+
+# Temporary files created by editors or OS
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# =========================
+# Keep everything else tracked
+# =========================
+!.gitignore
+!src/**
+!pom.xml
