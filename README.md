@@ -23,6 +23,12 @@ After extraction, ensure you have this directory:
 ### 4. Reload VS Code
 Restart Visual Studio Code to apply the updated environment variables.
 
+### 5. Confirm Installation
+Open a new **terminal** or **command prompt** and verify both Java and Maven are installed correctly:
+
+```bash
+java -version
+mvn -version
 ---
 
 ## 🚀 Run the Project
