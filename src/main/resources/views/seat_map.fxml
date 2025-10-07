@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="menuki.ticketing.controller.SeatMapController"
+            prefWidth="1100" prefHeight="700">
+
+    <left>
+        <VBox spacing="12" BorderPane.alignment="CENTER"
+              style="-fx-background-color:#f7f7fa;">
+            <children>
+                <Button text="Back" onAction="#onBack"/>
+                <Label text="Seat Details"
+                       style="-fx-font-weight:bold; -fx-font-size:14px;"/>
+
+                <GridPane hgap="8" vgap="8">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" minWidth="90"/>
+                        <ColumnConstraints halignment="LEFT"  minWidth="150"/>
+                    </columnConstraints>
+                    <children>
+                        <Label text="Event:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label fx:id="eventNameLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Seat:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Label fx:id="seatLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Type:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <Label fx:id="typeLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Price:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <Label fx:id="priceLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+
+
+                <HBox spacing="10">
+                    <Button fx:id="addToCartBtn" text="Add to Book" onAction="#onAddToCart" disable="true"/>
+                </HBox>
+
+                <Separator/>
+
+                <Label text="Cart" style="-fx-font-weight:bold; -fx-font-size:14px;"/>
+                <ListView fx:id="cartList" prefHeight="200"/>
+
+                <HBox spacing="10">
+                    <Button text="Clear Cart" onAction="#onClearCart"/>
+                    <Button text="Checkout"  onAction="#onCheckout"/>
+                </HBox>
+
+                <Label fx:id="statusLabel" style="-fx-text-fill:#4b5563; -fx-font-size:12px;"/>
+            </children>
+            <padding>
+                <Insets top="16" right="16" bottom="16" left="16"/>
+            </padding>
+        </VBox>
+    </left>
+
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="16">
+            <children>
+
+                <StackPane>
+                    <Rectangle width="700" height="22" arcWidth="6" arcHeight="6"
+                               style="-fx-fill: linear-gradient(to right, #dddddd, #f7f7f7); -fx-stroke:#bbbbbb;"/>
+                    <Label text="SCREEN" style="-fx-font-weight:bold; -fx-text-fill:#444444;"/>
+                </StackPane>
+
+                <HBox spacing="18" alignment="CENTER">
+                    <children>
+                        <HBox spacing="6" alignment="CENTER_LEFT">
+                            <Button maxWidth="30" maxHeight="30" disable="true"
+                                    style="-fx-pref-width:30; -fx-pref-height:30; -fx-background-radius:6; -fx-border-radius:6; -fx-border-color:#999999; -fx-background-color:#ffffff;"/>
+                            <Label text="Available"/>
+                        </HBox>
+                        <HBox spacing="6" alignment="CENTER_LEFT">
+                            <Button maxWidth="30" maxHeight="30" disable="true"
+                                    style="-fx-pref-width:30; -fx-pref-height:30; -fx-background-radius:6; -fx-border-radius:6; -fx-border-color:#999999; -fx-background-color:#a0c4ff;"/>
+                            <Label text="Selected"/>
+                        </HBox>
+                        <HBox spacing="6" alignment="CENTER_LEFT">
+                            <Button maxWidth="30" maxHeight="30" disable="true"
+                                    style="-fx-pref-width:30; -fx-pref-height:30; -fx-background-radius:6; -fx-border-radius:6; -fx-border-color:#999999; -fx-background-color:#c7c7c7;"/>
+                            <Label text="Reserved"/>
+                        </HBox>
+                        <HBox spacing="6" alignment="CENTER_LEFT">
+                            <Button maxWidth="30" maxHeight="30" disable="true"
+                                    style="-fx-pref-width:30; -fx-pref-height:30; -fx-background-radius:6; -fx-border-radius:6; -fx-border-color:#f59e0b; -fx-border-width:2; -fx-background-color:#fff4db;"/>
+                            <Label text="VIP"/>
+                        </HBox>
+                    </children>
+                </HBox>
+
+
+                <ScrollPane fitToWidth="true" fitToHeight="true" prefHeight="560" prefWidth="800" hbarPolicy="NEVER">
+                    <content>
+                        <StackPane>
+                            <GridPane fx:id="seatGrid" hgap="10" vgap="12" alignment="TOP_CENTER">
+                                <padding>
+                                    <Insets top="16" right="16" bottom="16" left="16"/>
+                                </padding>
+                            </GridPane>
+                        </StackPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
