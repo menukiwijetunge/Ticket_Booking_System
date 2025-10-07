@@ -11,7 +11,6 @@ Extract the ZIP file to:
 ``` C:\Program Files\Apache\Maven ```
 
 After extraction, ensure you have this directory:
-
 ``` C:\Program Files\Apache\Maven\apache-maven-3.9.11\bin  ```
 
 
