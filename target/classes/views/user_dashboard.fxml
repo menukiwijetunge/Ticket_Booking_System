@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="menuki.ticketing.controller.UserDashboardController">
+
+    <top>
+        <ToolBar>
+            <Label text="User Dashboard" style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label fx:id="currentUserLabel" text="Welcome"/>
+            <Button text="Logout" onAction="#handleLogout"/>
+        </ToolBar>
+    </top>
+
+    <left>
+        <VBox spacing="8" BorderPane.alignment="CENTER">
+            <children>
+                <Button text="Orders" onAction="#onOrders"/>
+            </children>
+            <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox>
+            <children>
+                <TableView fx:id="eventsTable" prefHeight="420" prefWidth="760">
+                    <columns>
+                        <TableColumn fx:id="colEventId"   text="ID"      prefWidth="100"/>
+                        <TableColumn fx:id="colEventName" text="Event"   prefWidth="320"/>
+                        <TableColumn fx:id="colEventDate" text="Date"    prefWidth="160"/>
+                        <TableColumn fx:id="colSeats"     text="# Seats" prefWidth="100"/>
+                        <TableColumn fx:id="colView"      text="View"    prefWidth="100"/>
+                    </columns>
+                    <placeholder><Label text="No events found"/></placeholder>
+                </TableView>
+            </children>
+            <padding>
+                <Insets top="0" right="20" bottom="20" left="0"/>
+            </padding>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10">
+            <children>
+                <Label fx:id="statusLabel" text="Ready"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+            </children>
+            <padding><Insets top="6" right="20" bottom="10" left="10"/></padding>
+        </HBox>
+    </bottom>
+</BorderPane>
