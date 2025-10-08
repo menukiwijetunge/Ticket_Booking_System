@@ -65,8 +65,8 @@ public class LoginController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent root = loader.load();
         stage.setTitle(title);
-         stage.setScene(new Scene(root));
-         stage.setMaximized(true);
+        stage.setScene(new Scene(root));
+        stage.setMaximized(true);
 
     }
 

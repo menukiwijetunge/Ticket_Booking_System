@@ -43,6 +43,13 @@ Default Users
 | User  | user1    | password |
 | Admin | admin    | admin123 |
 
+## Run Unit tests
+
+Unit tests are located in src>test>java>menuki>ticketing>service
+To run the tests simply run in root folder
+``` mvn test ```
+``` mvn clean test ```
+
 
 Note: This project is not fully perfect due to time constraints. It focuses on covering the 
 core requirements outlined in the instructions. 
